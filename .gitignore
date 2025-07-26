@@ -1,6 +1,7 @@
 __pycache__/
 *.pyc
 *.pkl
+*.log
 .env
 data/
 model/
