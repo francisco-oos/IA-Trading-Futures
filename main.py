@@ -9,7 +9,7 @@ def init_binance_client():
         client.FUTURES_URL = 'https://testnet.binancefuture.com/fapi'
     return client
 
-def get_ohlcv(symbol='BTCUSDT', interval='15m', limit=500):
+def get_ohlcv(symbol='BTCUSDT', interval='15m', limit=1500):
     client = init_binance_client()
     klines = client.futures_klines(symbol=symbol, interval=interval, limit=limit)
     df = pd.DataFrame(klines, columns=[
